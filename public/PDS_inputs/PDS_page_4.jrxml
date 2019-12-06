@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PDS_page_4" pageWidth="612" pageHeight="1008" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8a4e5ed4-0c4a-406d-844f-dacfe0e77658">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="7.2 "/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="bio_num" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM
+  table_employee AS emp
+  INNER JOIN table_personal AS p_info
+    ON emp.bio_num = p_info.personal_id
+  INNER JOIN table_government AS gov
+    ON emp.bio_num = gov.government_id
+  INNER JOIN table_address AS address
+    ON emp.bio_num = address.address_id
+  INNER JOIN table_family_background AS fam
+    ON emp.bio_num = fam.family_id
+  INNER JOIN table_educ_background as educ
+    ON emp.bio_num = educ.educ_id
+WHERE emp.bio_num = $P{bio_num}]]>
+	</queryString>
+	<field name="id" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="bio_num" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="bio_num"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="firstname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="firstname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="middlename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="middlename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="lastname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="lastname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="presuf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="presuf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="dateofappoint" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="dateofappoint"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="office" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="office"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="created_at" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="updated_at" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<group name="bio_num">
+		<groupExpression><![CDATA[$F{bio_num}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="968" splitType="Stretch">
+			<image>
+				<reportElement x="-11" y="-10" width="592" height="977" uuid="e7718afa-3904-45f3-a40d-78847f7c32b4"/>
+				<imageExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/hris/public/jasperinputs/PDS image/Personal Data Sheet page 4-1.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

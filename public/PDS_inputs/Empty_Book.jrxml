@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Empty_Book" pageWidth="595" pageHeight="842" sectionType="Part" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="d2716064-8ae4-40cf-a575-33afba400e3a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="7.2 "/>
+	<property name="net.sf.jasperreports.print.create.bookmarks" value="true"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="bio_num" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM
+  table_employee AS emp
+  INNER JOIN table_personal AS p_info
+    ON emp.bio_num = p_info.personal_id
+  INNER JOIN table_government AS gov
+    ON emp.bio_num = gov.government_id
+  INNER JOIN table_address AS address
+    ON emp.bio_num = address.address_id
+  INNER JOIN table_family_background AS fam
+    ON emp.bio_num = fam.family_id
+  INNER JOIN table_educ_background as educ
+    ON emp.bio_num = educ.educ_id
+WHERE emp.bio_num = $P{bio_num}]]>
+	</queryString>
+	<field name="id" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="bio_num" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="bio_num"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="firstname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="firstname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="middlename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="middlename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="lastname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="lastname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="presuf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="presuf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="dateofappoint" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="dateofappoint"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="office" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="office"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="created_at" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="updated_at" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="COLUMN_13" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="personal_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="personal_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="height" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="height"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="weight" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="weight"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="bloodtype" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="bloodtype"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="citizenship" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="citizenship"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="placeofbirth" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="placeofbirth"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="birthday" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="birthday"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="civilstatus" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="civilstatus"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="telephone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="telephone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="mobileno" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mobileno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="COLUMN_25" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="COLUMN_26" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="COLUMN_27" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="government_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="government_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="pagibig" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="pagibig"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="gsis" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gsis"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="sss" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="sss"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="philhealth" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="philhealth"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="tin" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tin"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="agency_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="agency_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="COLUMN_35" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="COLUMN_36" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="COLUMN_37" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="address_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="address_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="prklotblk" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="prklotblk"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="street" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="street"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="strsub" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="strsub"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="barangay" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="barangay"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="muncit" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="muncit"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="provsta" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="provsta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="country" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="country"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="zipcode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="zipcode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="permanentadd" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="permanentadd"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="COLUMN_48" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="COLUMN_49" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="COLUMN_50" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="family_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="family_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="spsurname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spsurname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="spfirstname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spfirstname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="spsuf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spsuf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="spmiddlename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spmiddlename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="spoccupation" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spoccupation"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="spemployer" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spemployer"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="spbadd" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spbadd"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="sptelephone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="sptelephone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="fsurename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fsurename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="ffirstname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ffirstname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="fmiddlename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fmiddlename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="fsuf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fsuf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="mmaiden" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mmaiden"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="msurename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="msurename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="mfirstname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mfirstname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="mmiddlename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mmiddlename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="COLUMN_68" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="educ_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="educ_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="e_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="e_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="e_from" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="e_from"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="e_to" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="e_to"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="e_honor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="e_honor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="s_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="s_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="s_from" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="s_from"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="s_to" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="s_to"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="s_honor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="s_honor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="v_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="v_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="v_degree" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="v_degree"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="v_from" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="v_from"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="v_to" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="v_to"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="v_highest_level" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="v_highest_level"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="c_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="c_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="c_degree" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="c_degree"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="c_from" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="c_from"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="c_to" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="c_to"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="c_highest_level" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="c_highest_level"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="c_honor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="c_honor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<detail>
+		<part uuid="d45e0f6d-108f-493b-8e57-7d1bb5261337">
+			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd">
+				<subreportParameter name="REPORT_CONNECTION">
+					<subreportParameterExpression><![CDATA[$P{REPORT_CONNECTION}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="bio_num">
+					<subreportParameterExpression><![CDATA[$P{bio_num}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/kap-hris/public/PDS_inputs/PDS_page_1.jasper"]]></subreportExpression>
+			</p:subreportPart>
+		</part>
+		<part uuid="12e51415-14dc-4da7-8b3a-088648399386">
+			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd">
+				<subreportParameter name="REPORT_CONNECTION">
+					<subreportParameterExpression><![CDATA[$P{REPORT_CONNECTION}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="bio_num">
+					<subreportParameterExpression><![CDATA[$P{bio_num}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/kap-hris/public/PDS_inputs/PDS_page_2.jasper"]]></subreportExpression>
+			</p:subreportPart>
+		</part>
+		<part uuid="9da3671e-9b1f-40d9-809c-7b951d83a174">
+			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd">
+				<subreportParameter name="REPORT_CONNECTION">
+					<subreportParameterExpression><![CDATA[$P{REPORT_CONNECTION}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="bio_num">
+					<subreportParameterExpression><![CDATA[$P{bio_num}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/kap-hris/public/PDS_inputs/PDS_page_3.jasper"]]></subreportExpression>
+			</p:subreportPart>
+		</part>
+		<part uuid="238e5182-32c5-4e11-9775-d1cee85cbefa">
+			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd">
+				<subreportParameter name="REPORT_CONNECTION">
+					<subreportParameterExpression><![CDATA[$P{REPORT_CONNECTION}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="bio_num">
+					<subreportParameterExpression><![CDATA[$P{bio_num}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/kap-hris/public/PDS_inputs/PDS_page_4.jasper"]]></subreportExpression>
+			</p:subreportPart>
+		</part>
+	</detail>
+</jasperReport>

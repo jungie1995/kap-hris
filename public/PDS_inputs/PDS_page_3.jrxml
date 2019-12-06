@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PDS_page_3" pageWidth="612" pageHeight="1008" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="820d1f50-11f6-4381-842d-66b92cbd33a0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db for php 7.xml"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Voluntary Work" uuid="dd3e7182-9e2a-4936-80cf-538ef58b4029">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db for php 7.xml"/>
+		<parameter name="bio_num" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[Select * from table_voluntary_work where voluntary_id = $P{bio_num}]]>
+		</queryString>
+		<field name="id" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.label" value="id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_voluntary_work"/>
+		</field>
+		<field name="voluntary_id" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="voluntary_id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_voluntary_work"/>
+		</field>
+		<field name="vol_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="vol_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_voluntary_work"/>
+		</field>
+		<field name="vol_from" class="java.sql.Date">
+			<property name="com.jaspersoft.studio.field.label" value="vol_from"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_voluntary_work"/>
+		</field>
+		<field name="vol_to" class="java.sql.Date">
+			<property name="com.jaspersoft.studio.field.label" value="vol_to"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_voluntary_work"/>
+		</field>
+		<field name="vol_nohours" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="vol_nohours"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_voluntary_work"/>
+		</field>
+		<field name="vol_position" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="vol_position"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_voluntary_work"/>
+		</field>
+		<group name="voluntary_id">
+			<groupExpression><![CDATA[$F{voluntary_id}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="Learning Development" uuid="962c2776-f1db-489d-839c-5e5ca4c91107">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db for php 7.xml"/>
+		<parameter name="bio_num" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[Select * from table_learning_development where program_id = $P{bio_num}]]>
+		</queryString>
+		<field name="id" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.label" value="id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_learning_development"/>
+		</field>
+		<field name="program_id" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="program_id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_learning_development"/>
+		</field>
+		<field name="p_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="p_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_learning_development"/>
+		</field>
+		<field name="p_from" class="java.sql.Date">
+			<property name="com.jaspersoft.studio.field.label" value="p_from"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_learning_development"/>
+		</field>
+		<field name="p_to" class="java.sql.Date">
+			<property name="com.jaspersoft.studio.field.label" value="p_to"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_learning_development"/>
+		</field>
+		<field name="p_nohours" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="p_nohours"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_learning_development"/>
+		</field>
+		<field name="p_typeofid" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="p_typeofid"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_learning_development"/>
+		</field>
+		<field name="p_sponsor" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="p_sponsor"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_learning_development"/>
+		</field>
+		<group name="program_id">
+			<groupExpression><![CDATA[$F{program_id}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="Other Information" uuid="fe4a92ad-aded-4371-9163-cb600b0d34ed">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db for php 7.xml"/>
+		<parameter name="bio_num" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[Select * from table_other_information where info_id = $P{bio_num}]]>
+		</queryString>
+		<field name="id" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.label" value="id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_other_information"/>
+		</field>
+		<field name="info_id" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="info_id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_other_information"/>
+		</field>
+		<field name="special_skills" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="special_skills"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_other_information"/>
+		</field>
+		<field name="non_academic" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="non_academic"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_other_information"/>
+		</field>
+		<field name="membership_assoc" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="membership_assoc"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_other_information"/>
+		</field>
+		<group name="info_id">
+			<groupExpression><![CDATA[$F{info_id}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="bio_num" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM
+  table_employee AS emp
+  INNER JOIN table_personal AS p_info
+    ON emp.bio_num = p_info.personal_id
+  INNER JOIN table_government AS gov
+    ON emp.bio_num = gov.government_id
+  INNER JOIN table_address AS address
+    ON emp.bio_num = address.address_id
+  INNER JOIN table_family_background AS fam
+    ON emp.bio_num = fam.family_id
+  INNER JOIN table_educ_background as educ
+    ON emp.bio_num = educ.educ_id
+WHERE emp.bio_num = $P{bio_num}]]>
+	</queryString>
+	<field name="id" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="bio_num" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="bio_num"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="firstname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="firstname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="middlename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="middlename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="lastname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="lastname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="presuf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="presuf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="dateofappoint" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="dateofappoint"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="office" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="office"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="created_at" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<field name="updated_at" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+	</field>
+	<group name="bio_num">
+		<groupExpression><![CDATA[$F{bio_num}]]></groupExpression>
+	</group>
+	<detail>
+		<band height="968" splitType="Stretch">
+			<image>
+				<reportElement x="-9" y="-8" width="592" height="970" uuid="bab0618f-1b52-44f0-96d9-9de9ff239341"/>
+				<imageExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/hris/public/jasperinputs/PDS image/Personal Data Sheet page 3-1.jpg"]]></imageExpression>
+			</image>
+			<componentElement>
+				<reportElement x="8" y="65" width="553" height="141" uuid="d883ba25-cfe2-4b04-87ba-705cc8043a0e">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Voluntary Work" uuid="bb53a48f-8325-4422-adb4-962bd562be71">
+						<datasetParameter name="bio_num">
+							<datasetParameterExpression><![CDATA[$P{bio_num}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="240" uuid="78afa954-eb34-45f0-a255-78d2b7464f40">
+						<jr:detailCell height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="240" height="20" uuid="9bb5eb23-98ab-45b9-b885-5d6cb70c4542">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="3"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{vol_name} == null ? " " : $F{vol_name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="43" uuid="f5648a7b-7954-4486-bc97-8a7dd4948047">
+						<jr:detailCell height="20" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="43" height="20" uuid="22b354af-2661-4d9c-ad01-46fb499efe33"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{vol_from} == null ? " " : new SimpleDateFormat("MM/dd/yyyy").format($F{vol_from})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="42" uuid="205f5e55-43b8-4792-9abf-ea140d548180">
+						<jr:detailCell height="20" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="42" height="20" uuid="97e28bf9-873c-4d73-97f6-e6060608ebe9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{vol_to} == null ? " " : new SimpleDateFormat("MM/dd/yyyy").format($F{vol_to})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="42" uuid="63e9aacf-80f8-4672-bd2c-2663dd0a8acb">
+						<jr:detailCell height="20" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="42" height="20" uuid="f7ea9a83-dd0a-4407-ba57-05b0df8e3787"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vol_nohours} == null ? " " : $F{vol_nohours}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="186" uuid="bcb0fdb9-c57c-4cac-a5b2-6f584268acb3">
+						<jr:detailCell height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="186" height="20" uuid="a58f43af-7bd1-48d7-8cfa-475592e28a45"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vol_position} == null ? " " : $F{vol_position}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement x="8" y="280" width="552" height="380" uuid="8ab9b4a2-8903-4b3e-916d-24c59c362563">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Learning Development" uuid="6a788615-1ae6-495f-83b4-813435219a95">
+						<datasetParameter name="bio_num">
+							<datasetParameterExpression><![CDATA[$P{bio_num}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="241" uuid="ce7b18b6-64d2-483d-8e0e-174505936b0a">
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="241" height="17" uuid="4e27b6bf-6469-45c8-ba05-caf5d6c2e080">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="3"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{p_name}  == null ? " " : $F{p_name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="42" uuid="d33a663d-d93a-41a6-807b-589424fcf980">
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="42" height="17" uuid="64563d18-82b0-459a-8643-a0835321db72"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{p_from} == null ? " " : new SimpleDateFormat("MM/dd/yyyy").format($F{p_from})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="43" uuid="bf3810f8-8f79-49a4-8dcb-aedf0a3ad04e">
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="43" height="17" uuid="7cbf9f50-d288-4ddc-9d86-11c11a73dd18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{p_to} == null ? " " : new SimpleDateFormat("MM/dd/yyyy").format($F{p_to})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="41" uuid="e50294f5-2dea-4212-be93-833989d6c3fd">
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="41" height="17" uuid="0d4602d3-977a-4bdd-bbc3-f772b143a43d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{p_nohours} == null ? " " : $F{p_nohours}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="47" uuid="3fda88d2-b04d-4f25-87d1-a3bf4a0fb3b0">
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="47" height="17" uuid="c67abf21-7cb9-4e94-bb0b-9ba074032972"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{p_typeofid} == null ? " " : $F{p_typeofid}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="138" uuid="2c63c2f7-8f45-4725-98e8-eb8d7ff4eebe">
+						<jr:detailCell height="17">
+							<textField>
+								<reportElement x="0" y="0" width="138" height="17" uuid="1429fa72-27ec-4ccd-ba1b-8da847f3cfb6"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{p_sponsor} == null ? " " : $F{p_sponsor}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement x="8" y="709" width="552" height="125" uuid="6c575391-5346-41fb-8c59-f92c1e1d41f1">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Other Information" uuid="554f35d9-7357-42db-9d0f-22d74b80d4b0">
+						<datasetParameter name="bio_num">
+							<datasetParameterExpression><![CDATA[$P{bio_num}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="142" uuid="481e9c03-ee04-4227-9c98-c20394ca9b0b">
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="142" height="17" uuid="475e47da-4d00-449c-be5b-5fe2509487cf"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{special_skills}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="272" uuid="6168a08e-97b0-4989-8a6b-c52ee1aa1ab3">
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="272" height="17" uuid="adc73da4-e935-4a77-94ab-6e737d5b7fdc"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{non_academic}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="138" uuid="ae867f65-a504-4792-81cc-34392524927d">
+						<jr:detailCell height="17">
+							<textField>
+								<reportElement x="0" y="0" width="138" height="17" uuid="c0a1ac88-9f44-49d6-9063-c448afc8a00d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{membership_assoc}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

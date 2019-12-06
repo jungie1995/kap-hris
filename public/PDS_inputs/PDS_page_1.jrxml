@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PDS_page_1" pageWidth="612" pageHeight="1008" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ca4be1b9-730f-453a-974e-d2a772888660">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db for php 7.xml"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1011"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F5F5F5">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Children Dataset" uuid="0ac24f35-9ba2-4ab4-9d31-2d0868ed3cd8">
+		<parameter name="bio_num" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[Select * from table_children where child_id = $P{bio_num}]]>
+		</queryString>
+		<field name="id" class="java.lang.Long">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="child_id" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="fullname" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="child_birthday" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<group name="child_id">
+			<groupExpression><![CDATA[$F{child_id}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="Graduate Studies" uuid="d6e907a8-293e-468d-bef6-13d3d8e709c9">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db for php 7.xml"/>
+		<parameter name="bio_num" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[Select * from table_graduate_studies where studies_id = $P{bio_num}]]>
+		</queryString>
+		<field name="studies_id" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="studies_id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_graduate_studies"/>
+		</field>
+		<field name="studies_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="studies_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_graduate_studies"/>
+		</field>
+		<field name="studies_degree" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="studies_degree"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_graduate_studies"/>
+		</field>
+		<field name="studies_from" class="java.sql.Date">
+			<property name="com.jaspersoft.studio.field.label" value="studies_from"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_graduate_studies"/>
+		</field>
+		<field name="studies_to" class="java.sql.Date">
+			<property name="com.jaspersoft.studio.field.label" value="studies_to"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_graduate_studies"/>
+		</field>
+		<field name="studies_honor" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="studies_honor"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="table_graduate_studies"/>
+		</field>
+		<group name="studies_id">
+			<groupExpression><![CDATA[$F{studies_id}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="bio_num" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM
+  table_employee AS emp
+  INNER JOIN table_personal AS p_info
+    ON emp.bio_num = p_info.personal_id
+  INNER JOIN table_government AS gov
+    ON emp.bio_num = gov.government_id
+  INNER JOIN table_address AS address
+    ON emp.bio_num = address.address_id
+  INNER JOIN table_family_background AS fam
+    ON emp.bio_num = fam.family_id
+  INNER JOIN table_educ_background as educ
+    ON emp.bio_num = educ.educ_id
+WHERE emp.bio_num = $P{bio_num}]]>
+	</queryString>
+	<field name="id" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bio_num" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="bio_num"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="firstname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="firstname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="middlename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="middlename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lastname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="lastname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="presuf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="presuf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateofappoint" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="dateofappoint"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="office" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="office"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="created_at" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="updated_at" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COLUMN_13" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="personal_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="personal_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="height" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="height"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="weight" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="weight"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bloodtype" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="bloodtype"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="citizenship" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="citizenship"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="placeofbirth" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="placeofbirth"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="birthday" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="birthday"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="civilstatus" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="civilstatus"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telephone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="telephone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mobileno" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mobileno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COLUMN_25" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="COLUMN_26" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_personal"/>
+	</field>
+	<field name="COLUMN_27" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="government_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="government_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pagibig" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="pagibig"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gsis" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gsis"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sss" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="sss"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="philhealth" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="philhealth"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tin" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tin"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="agency_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="agency_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="COLUMN_35" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="COLUMN_36" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_government"/>
+	</field>
+	<field name="COLUMN_37" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="address_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="address_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prklotblk" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="prklotblk"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="street" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="street"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="strsub" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="strsub"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="barangay" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="barangay"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="muncit" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="muncit"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="provsta" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="provsta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="country" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="country"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="zipcode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="zipcode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="permanentadd" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="permanentadd"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COLUMN_48" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="COLUMN_49" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_address"/>
+	</field>
+	<field name="COLUMN_50" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="family_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="family_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="spsurname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spsurname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="spfirstname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spfirstname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="spsuf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spsuf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="spmiddlename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spmiddlename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="spoccupation" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spoccupation"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="spemployer" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spemployer"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="spbadd" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="spbadd"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sptelephone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="sptelephone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fsurename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fsurename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ffirstname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ffirstname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fmiddlename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fmiddlename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fsuf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fsuf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+	</field>
+	<field name="mmaiden" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mmaiden"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="msurename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="msurename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mfirstname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mfirstname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mmiddlename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mmiddlename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_family_background"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COLUMN_68" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="educ_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="educ_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="e_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="e_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="e_from" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="e_from"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="e_to" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="e_to"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="e_honor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="e_honor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="s_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="s_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="s_from" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="s_from"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="s_to" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="s_to"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="s_honor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="s_honor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="v_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="v_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="v_degree" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="v_degree"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="v_from" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="v_from"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="v_to" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="v_to"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="v_highest_level" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="v_highest_level"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="c_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="c_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="c_degree" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="c_degree"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="c_from" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="c_from"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="c_to" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="c_to"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="c_highest_level" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="c_highest_level"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<field name="c_honor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="c_honor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="table_educ_background"/>
+	</field>
+	<group name="bio_num">
+		<groupExpression><![CDATA[$F{bio_num}]]></groupExpression>
+	</group>
+	<detail>
+		<band height="968" splitType="Stretch">
+			<image>
+				<reportElement mode="Opaque" x="-13" y="-18" width="597" height="986" uuid="775583e0-ea7b-4682-a37f-5982a296a893"/>
+				<imageExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/hris/public/jasperinputs/PDS image/Personal Data Sheet page 1-1.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="109" y="117" width="100" height="18" uuid="f2dc0bd3-d4fc-4ba7-8fa9-cd898ae57c6e"/>
+				<textFieldExpression><![CDATA[$F{firstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="135" width="100" height="16" uuid="0240bfbb-de8b-4253-92b6-b693a39190a1"/>
+				<textFieldExpression><![CDATA[$F{middlename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="101" width="100" height="16" uuid="317e9301-6b4c-4a22-9091-f6299d9d4c15"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="391" width="100" height="20" uuid="7278de40-986b-4893-9cf3-79072842e1db"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tin} == null ? " " : $F{tin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="411" width="211" height="16" uuid="ff3bc672-f706-414a-b48a-81b36450bcbb"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{email} == null ? "N/A" : $F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="155" width="100" height="20" uuid="464c87f8-a865-430c-ac9b-6b754731fd9f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{birthday}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="180" width="126" height="18" uuid="e255a617-cc30-45b1-ab71-734087908308"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{placeofbirth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="201" width="131" height="16" uuid="83ad19ec-fc51-44f1-9ca9-e466dd5e8af6"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{country}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="201" width="58" height="20" uuid="4530c9ae-697d-461c-9af6-d18e1f0ceeb8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gender}.equals("M") ? "/" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="201" width="72" height="20" uuid="3e71d475-fa43-4882-8f50-923abe92511a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gender}.equals("F") ? "/" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="257" width="100" height="17" uuid="eb993fb5-83ae-4bd2-b8ed-547087c12e7f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{height}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="276" width="100" height="16" uuid="80eba792-20e1-476b-870a-7a3c3219523e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{weight}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="293" width="100" height="18" uuid="42fcaa34-3ea7-4437-9183-6b8e97db14cb"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{bloodtype} == null ? " " : $F{bloodtype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="313" width="100" height="18" uuid="f4ece1ec-d817-4461-b96a-fb93ad486db8"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{gsis} == null ? " " : $F{gsis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="332" width="100" height="20" uuid="c590045b-eacb-46eb-8a33-5807cd71ca33"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{pagibig} == null ? " " : $F{pagibig}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="352" width="100" height="20" uuid="87bdec10-0719-4168-80bd-7d0a988c9b58"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{philhealth} == null ? " " : $F{philhealth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="371" width="100" height="20" uuid="c50dbc6f-3ab7-4f20-a114-9990536a3f82"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{sss} == null ? " " : $F{sss}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="391" width="211" height="20" uuid="ea5d5afa-2317-46f9-8b57-5795d80db0d5"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mobileno} == null? "N/A" : $F{mobileno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="371" width="211" height="20" uuid="59461ebe-a13d-4c41-83b6-c08b9bdb767d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telephone} == null ? "N/A" : $F{telephone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="219" width="100" height="15" uuid="66982f89-710e-44c9-b048-25901f079ae6"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prklotblk} == null ? " " :  $F{prklotblk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="237" width="100" height="20" uuid="10c800ab-6049-430e-a432-b17840476388"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strsub} == null ? " " : $F{strsub}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="457" y="237" width="100" height="20" uuid="9db9c9a1-99a2-43a8-998d-a085fda825ee"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{barangay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="257" width="101" height="20" uuid="7a46a3a8-dfb0-4c08-9cd0-1f111216312d"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{muncit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="257" width="119" height="20" uuid="eaca24ed-2bb1-4ba1-a2a2-d84f31af2524"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{provsta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="277" width="100" height="16" uuid="16fb5a97-a93a-4060-a23c-2c2fd5c30ec2"/>
+				<textFieldExpression><![CDATA[$F{zipcode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="218" width="71" height="13" uuid="8ecf06e2-5894-4dd1-a7fc-0db6156f0b37"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{civilstatus}.equals("Single") ? "/" : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="218" width="72" height="13" uuid="02db4ca6-8413-4667-a59d-ac88153346d6"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{civilstatus}.equals("Married") ? "/" : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="229" width="81" height="13" uuid="c03d53ae-c0f6-490f-a036-5727e10bf759"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{civilstatus}.equals("Widowed") ? "/" : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="230" width="72" height="13" uuid="8f15c17d-d3c7-4ea9-bfcb-34ed369402f8"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{civilstatus}.equals("Separated") ? "/" : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="241" width="81" height="13" uuid="fd9468cf-1acc-4896-b2a9-f373adff8b4a"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{civilstatus}.equals("Others") ? "/" : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="121" width="100" height="14" uuid="6daf64c5-e340-4092-802d-7f917255a88e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{presuf} == null ? " " : $F{presuf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="457" y="217" width="100" height="20" uuid="d7c092c5-0c66-4044-b487-879532815851"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{street} == null ? " " : $F{street}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="444" width="210" height="14" uuid="6d4b56dd-009a-4a5d-9b6e-e3fc90590482"/>
+				<textFieldExpression><![CDATA[$F{spsurname} == null ? " " : $F{spsurname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="458" width="125" height="15" uuid="34a8b4b2-6c8a-40ea-bd18-f15a542794c4"/>
+				<textFieldExpression><![CDATA[$F{spfirstname} == null ? " " :  $F{spfirstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="473" width="210" height="13" uuid="24ef8534-36c4-4018-83b1-14d694288132"/>
+				<textFieldExpression><![CDATA[$F{spmiddlename} == null ? " " : $F{spmiddlename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="460" width="81" height="13" uuid="9a6cbfc2-741f-419d-b647-bcf23f53d407"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spsuf} == null ? " " : $F{spsuf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="486" width="210" height="14" uuid="c1bc8326-60ad-443f-b6d3-d94ccbbd09ac"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{spoccupation} == null ? " " : $F{spoccupation}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="323" y="458" width="244" height="180" uuid="6266494a-3642-4b1f-8e9a-abf3e13b39c0">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Children Dataset" uuid="e144dd78-2517-41f4-b34a-f2061ffd2761">
+						<datasetParameter name="bio_num">
+							<datasetParameterExpression><![CDATA[$P{bio_num}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="162" uuid="9a8cdcd1-2dfd-4ca1-9ed9-87d5a8096095">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:detailCell height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="162" height="15" uuid="b6f64b30-bee4-49b3-b234-876bc97bab3c">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								</reportElement>
+								<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font size="10"/>
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{fullname}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="82" uuid="e791ca32-9a09-4cfa-82ed-11854e02d810">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:detailCell height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="82" height="15" uuid="883bd113-7527-469f-92b9-4e82597787f1"/>
+								<textElement textAlignment="Center">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format($F{child_birthday})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement x="111" y="500" width="210" height="15" uuid="3100ced0-9727-4d2a-9869-5a4220818af4"/>
+				<textFieldExpression><![CDATA[$F{spemployer} == null ? " " : $F{spemployer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="515" width="210" height="15" uuid="032e6908-2912-4125-a26b-0bdfb84d986a"/>
+				<textFieldExpression><![CDATA[$F{spbadd} == null ? " " : $F{spbadd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="532" width="210" height="15" uuid="fd52acc8-c456-4d1d-b94a-086adde7f939"/>
+				<textFieldExpression><![CDATA[$F{sptelephone} == null ? " " : $F{sptelephone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="547" width="210" height="13" uuid="05ba7694-fbb4-4ee7-9176-931730e1ac10"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fsurename} == null ? " " : $F{fsurename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="560" width="125" height="16" uuid="30f80654-fc5b-41f6-bc3b-76e6bf6b7860"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ffirstname} == null ? " " : $F{ffirstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="576" width="210" height="15" uuid="5ac0c98f-cfd2-4282-84b5-9fea82845007"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fmiddlename} == null ? " " : $F{fmiddlename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="591" width="210" height="16" uuid="ab08582d-746d-49ec-8171-9db611da29b6"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mmaiden} == null ? " " : $F{mmaiden}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="607" width="210" height="17" uuid="91714e9c-da08-4a0d-aa76-b41f4d3ab816"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{msurename} == null ? " " : $F{msurename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="626" width="210" height="14" uuid="56f9ba9f-388b-483c-9016-64436506e3ca"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mfirstname} == null ? " " : $F{mfirstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="642" width="210" height="14" uuid="58368138-72ad-4f8a-b1e0-adee9e1df457"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mmiddlename} == null ? " " : $F{mmiddlename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="563" width="81" height="13" uuid="91c4917d-0b1b-4ac9-8206-b22e835fb6d9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fsuf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="410" width="169" height="17" uuid="4760e18e-3729-4075-9dc5-5bb79b15754e"/>
+				<textFieldExpression><![CDATA[$F{agency_no} == null ? " " : $F{agency_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="707" width="128" height="14" uuid="8147b78d-2a3a-413e-a6c5-b23ac5b427a0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{e_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="763" width="128" height="16" uuid="e6debfb3-e786-485c-a7b1-5e1c87d699d9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c_name} == null ? " " : $F{c_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="763" width="118" height="16" uuid="43889ecb-ac6c-4be1-9c7b-7ebc4005fb07"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c_degree} == null ? " " : $F{c_degree}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="707" width="33" height="14" uuid="6e69c84f-c7a7-46aa-b0ac-89dc032c094a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy").format($F{e_from})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="764" width="32" height="14" uuid="4d09a986-0d14-409b-a640-114a9464eeab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c_to}== null ? " " : new SimpleDateFormat("yyyy").format($F{c_to})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="707" width="32" height="14" uuid="500113ea-3cd0-44ad-b5e9-141c1fe5d3c5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy").format($F{e_to})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="727" width="32" height="14" uuid="b70bf435-c419-4efa-8845-3ce82473e65f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy").format($F{s_from})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="727" width="32" height="14" uuid="ac349118-81a6-4003-949d-68d02d43e76d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy").format($F{s_to})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="746" width="32" height="14" uuid="dde38542-bf5d-4833-aedd-b73753d93e89"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy").format($F{v_to})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="746" width="32" height="14" uuid="48cafb23-0710-4c9d-832c-14b885241793"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_from} == null ? " " : new SimpleDateFormat("yyyy").format($F{v_from})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="764" width="33" height="14" uuid="7a6fac7a-aab4-46cf-9e7f-31acaf5b0577"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c_from} == null ? " " : new SimpleDateFormat("yyyy").format($F{c_from})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="526" y="707" width="40" height="14" uuid="29ea56c2-4421-41cb-b817-1a855de75a9d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{e_honor} == null ? " " :$F{e_honor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="727" width="128" height="14" uuid="4860f486-6a11-4279-96bc-ca10f4c6f403"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{s_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="526" y="726" width="41" height="15" uuid="48463dce-ccc7-428c-a01d-a8183d5f653f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{s_honor} == null ? " " : $F{s_honor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="745" width="128" height="16" uuid="5fe98e2a-8bbe-4c2e-8e7c-6db42813aacc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_name} == null ? " " : $F{v_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="745" width="118" height="15" uuid="c951bb41-bf04-4a8e-ba09-96c5550af8ae"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_degree} == null ? " " : $F{v_degree}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="437" y="745" width="43" height="16" uuid="438351bd-4a9e-4a31-8693-2f3ca0c6b19c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_highest_level} == null ? " " : $F{v_highest_level}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="437" y="763" width="43" height="17" uuid="48a2513e-9175-4edd-984b-f359f89d28c2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c_highest_level} == null ? " " : $F{c_highest_level}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="526" y="764" width="40" height="14" uuid="fc1a57bd-f741-4db6-9440-209117d727d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c_honor} == null ? " " : $F{c_honor}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="103" y="780" width="464" height="17" uuid="504a01a3-5c32-471a-a3a0-19c1498f8a85">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Graduate Studies" uuid="00e2e8a0-047c-4c43-9943-c19c4544ce12">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="137" uuid="e872014e-c869-441b-9b29-a8946d64f613">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="137" height="17" uuid="86701a38-1f1f-406b-8d5b-1a93873864f3">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="3"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{studies_name} == null ? " " : $F{studies_name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="125" uuid="055a6c2a-01f9-4cce-a0d5-e9a49b2cca98">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="125" height="17" uuid="d473a608-4561-4b1f-b279-cf148ae7f49b">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="3"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{studies_degree} == null ? " " : $F{studies_degree}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="34" uuid="7624d079-bf53-43df-b66b-e7c2c545a5ec">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="34" height="17" uuid="8bcd0f61-3cfb-45ae-bcdb-8d037d6873cb"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{studies_from} == null ? " " : new SimpleDateFormat("yyyy").format($F{studies_from})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="35" uuid="11ff7293-1a7b-41fc-825b-f5283d57ed77">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="35" height="17" uuid="619c049f-f7f9-4ebe-b939-80fb54fd5920"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{studies_to} == null ? " " :new SimpleDateFormat("yyyy").format($F{studies_to})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="51" uuid="ec80ccfe-686c-4c01-822c-b81f99deb644">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="437cebd3-7b8f-4d34-bb77-f6e4238337f3">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:detailCell height="17"/>
+					</jr:column>
+					<jr:column width="42" uuid="475dad49-82a2-4a10-b36c-b945330ec669">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:detailCell height="17">
+							<textField>
+								<reportElement x="0" y="0" width="42" height="17" uuid="3bd5c82c-3d33-410f-9d3b-e847607f828e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{studies_honor} == null ? " " : $F{studies_honor}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>
