@@ -46,7 +46,7 @@
 										<td>{{item.created_at | moment("MMM, DD, YYYY")}}</td>
 										<td>
 											<router-link :to="{name: 'viewemployee', params: {id: item.bio_num}}" class="btn btn-info btn-xs"><span class="fa fa-eye"></span>&nbspView</router-link>
-											<router-link :to="{name: 'editemployee', params: {id: item.bio_num,bio_num: item.bio_num}}" class="btn btn-warning btn-xs"><span class="fa fa-edit"></span>&nbspEdit</router-link>
+											<!-- <router-link :to="{name: 'editemployee', params: {id: item.bio_num,bio_num: item.bio_num}}" class="btn btn-warning btn-xs"><span class="fa fa-edit"></span>&nbspEdit</router-link> -->
 											<!-- <button class="btn btn-success btn-xs" @click="report(item.bio_num)">&nbspPrint PDS</button> -->
 											<!-- <a class="btn btn-success btn-xs" :href="'/api/view-pds/'+item.bio_num" target="_blank">&nbspPrint PDS</a> -->
 											<a class="btn btn-danger btn-xs" :href="'/delete-employee?bio_num='+item.bio_num"><span class="fa fa-trash"></span>&nbspDelete</a>
@@ -89,7 +89,6 @@ export default {
 		employeeDataList(page = 1){
 			var _this = this;
 			axios.get('/api/employee-data-list?page='+page).then(function(response){
-				console.log(response.data);
 				_this.EmployeeData = response.data;
 			});
 		},

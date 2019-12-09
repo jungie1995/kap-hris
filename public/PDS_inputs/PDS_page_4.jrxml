@@ -15,6 +15,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="bio_num" class="java.lang.String"/>
+	<parameter name="img_page_4" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT *
 FROM
@@ -89,7 +90,7 @@ WHERE emp.bio_num = $P{bio_num}]]>
 		<band height="968" splitType="Stretch">
 			<image>
 				<reportElement x="-11" y="-10" width="592" height="977" uuid="e7718afa-3904-45f3-a40d-78847f7c32b4"/>
-				<imageExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/hris/public/jasperinputs/PDS image/Personal Data Sheet page 4-1.jpg"]]></imageExpression>
+				<imageExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/hris/public/jasperinputs/PDS image/Personal Data Sheet page 1-1.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</detail>

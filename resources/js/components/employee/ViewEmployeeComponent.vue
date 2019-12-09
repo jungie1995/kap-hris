@@ -60,155 +60,27 @@
 													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 														<div class="pull-right">
 															<router-link :to="{name: 'editemployeetab1',  params: {bio_num: employeedata.bio_num}}" class="btn btn-danger"><i class="fa fa-edit"></i> Edit</router-link>
-															<b-button v-b-modal.editOne variant="danger"><span class="fa fa-edit"></span>&nbspEdit</b-button>
-															<b-modal size="lg" id="editOne" title="Edit Personal Information" scrollable :hide-header="true" :hide-footer="true" no-close-on-backdrop>
-																<h4>Personal Information</h4>
-																<hr>
-																<div class="row">
-																	<div class="form-group col-md-4">
-																		<label class="control-label">Status of Appointment</label>
-																		<br>
-																		<select v-model="data.appointment" class="form-control custom-select">
-																			<option value="">-- Select Appointment --</option>
-																			<option v-for="appointment in appointmentList" v-bind:value="appointment.appointment_id" :selected="(employeedata.status == appointment.appointment_id)">{{appointment.appointment_name}}</option>
-																		</select>
-																	</div>
-																	<div class="form-group col-md-4">
-																		<label class="control-label">Office</label>
-																		<br>
-																		<select v-model="data.office" class="form-control custom-select">
-																			<option value="">-- Select Office --</option>
-																			<option v-for="office in officeList" v-bind:value="office.office_id" :selected="(employeedata.office == office.office_id)">{{office.office_name}}</option>
-																		</select>
-																	</div>
-																	<div class="form-group col-md-4">
-																		<label class="control-label">Civil Status</label>
-																		<br>
-																		<select v-model="data.status" class="form-control custom-select">
-																			<option value="">-- Select Civil Status --</option>
-																			<option value="1">Single</option>
-																			<option value="2">Bitter</option>
-																		</select>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="form-group col-md-4">
-																		<label class="control-label">Telephone No.</label>
-																		<input v-model="data.telephone" type="text" class="form-control" placeholder="e.g 12345678">
-																	</div>
-																	<div class="form-group col-md-4">
-																		<label class="control-label">Mobile No.</label>
-																		<input v-model="data.mobile" type="text" class="form-control" placeholder="e.g 09xxxxxxxxx">
-																	</div>
-																	<div class="form-group col-md-4">
-																		<label class="control-label">Email</label>
-																		<input v-model="data.email" type="email" class="form-control" placeholder="e.g example@email.com">
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="form-group col-md-4">
-																		<label class="control-label">Height (m)</label>
-																		<input v-model="data.height" type="text" class="form-control" placeholder="e.g 1.72">
-																	</div>
-																	<div class="form-group col-md-4">
-																		<label class="control-label">Weight (kg)</label>
-																		<input v-model="data.weight" type="text" class="form-control" placeholder="e.g 65">
-																	</div>
-																	<div class="form-group col-md-4">
-																		<label class="control-label">Blood Type</label>
-																		<input v-model="data.blood" type="text" class="form-control" placeholder="e.g B">
-																	</div>
-																</div>
-																<h4>Government ID's</h4>
-																<hr>
-																<div class="row">
-																	<div class="form-group col-md-4">
-																		<label class="control-label">GSIS ID</label>
-																		<input v-model="data.gsis" type="text" class="form-control" placeholder="e.g 123456789">
-																	</div>
-																	<div class="form-group col-md-4">
-																		<label class="control-label">PAG-IBIG ID</label>
-																		<input v-model="data.pagibig" type="text" class="form-control" placeholder="e.g 123456789">
-																	</div>
-																	<div class="form-group col-md-4">
-																		<label class="control-label">PHILHEALTH NO.</label>
-																		<input v-model="data.philhealth" type="text" class="form-control" placeholder="e.g 123456789">
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="form-group col-md-6">
-																		<label class="control-label">SSS NO.</label>
-																		<input v-model="data.sss" type="text" class="form-control" placeholder="e.g 123456789">
-																	</div>
-																	<div class="form-group col-md-6">
-																		<label class="control-label">TIN NO.</label>
-																		<input v-model="data.tin" type="text" class="form-control" placeholder="e.g 123456789">
-																	</div>
-																</div>
-																<h4>Address</h4>
-																<hr>
-																<div class="row">
-																	<div class="form-group col-md-4">
-																		<label class="control-label">Province</label>
-																		<br>
-																		<select v-model="address.province" class="form-control custom-select select2" v-on:change="selectedProvince()">
-																			<option value="">-- Select Province --</option>
-																			<option v-for="province in provinceList" v-bind:value="province.province_id">{{province.name}}</option>
-																		</select>
-																	</div>
-																	<div class="form-group col-md-4">
-																		<label class="control-label">City/Municipality</label>
-																		<br>
-																		<select v-model="address.cities" class="form-control custom-select select2" v-on:change="selectedCities()">
-																			<option value="">-- Select City/Municipality --</option>
-																			<option v-for="municipality in municipalityList" v-bind:value="municipality.city_id">{{municipality.name}}</option>
-																		</select>
-																	</div>
-																	<div class="form-group col-md-4">
-																		<label class="control-label">Barangay</label>
-																		<br>
-																		<select v-model="address.barangay" class="form-control custom-select select2">
-																			<option value="">-- Select Barangay --</option>
-																			<option v-for="barangay in barangayList" v-bind:value="barangay.code">{{barangay.name}}</option>
-																		</select>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="form-group col-md-6">
-																		<label class="control-label">Prk/St/Blk</label>
-																		<input v-model="address.prk" type="text" class="form-control" placeholder="e.g 123456789">
-																	</div>
-																	<div class="form-group col-md-6">
-																		<label class="control-label">Zip Code</label>
-																		<input v-model="address.zip" type="text" class="form-control" placeholder="e.g 8110">
-																	</div>
-																</div>
-																<div class="pull-right">
-																	<b-button variant="default" v-on:click="$bvModal.hide('editOne')">Cancel</b-button>	
-																	<b-button variant="danger" v-on:click="updateData()">Update</b-button>
-																</div>
-															</b-modal>
 														</div>
 													</div>
 												</div>
 												<hr>
 												<b-container>
-													<b-row>
+													<b-row style="background-color:#c1c1c1;">
 														<b-col cols="5">Biometric ID Number</b-col>
 														<b-col cols="1">:</b-col>
 														<b-col cols="6">{{employeedata.bio_num}}</b-col>
 													</b-row>
-													<b-row style="background-color:#c1c1c1;">
+													<b-row>
 														<b-col cols="5">Full Name</b-col>
 														<b-col cols="1">:</b-col>
 														<b-col cols="6">{{employeedata.firstname}} {{employeedata.middlename}} {{employeedata.lastname}} {{employeedata.presuf}}</b-col>
 													</b-row>
-													<b-row>
+													<b-row style="background-color:#c1c1c1;">
 														<b-col cols="5">Assigned Office</b-col>
 														<b-col cols="1">:</b-col>
 														<b-col cols="6">{{employeedata.office_name}}</b-col>
 													</b-row>
-													<b-row style="background-color:#c1c1c1;">
+													<b-row>
 														<b-col cols="5">Status of Appointment</b-col>
 														<b-col cols="1">:</b-col>
 														<b-col cols="6">{{employeedata.appointment_name}}</b-col>
@@ -226,7 +98,7 @@
 													<b-row style="background-color:#c1c1c1;">
 														<b-col cols="5">Place of Birth</b-col>
 														<b-col cols="1">:</b-col>
-														<b-col cols="6">--</b-col>
+														<b-col cols="6">{{data.placeofbirth}}</b-col>
 													</b-row>
 													<b-row>
 														<b-col cols="5">Gender</b-col>
@@ -237,22 +109,22 @@
 													<b-row style="background-color:#c1c1c1;">
 														<b-col cols="5">Civil Status</b-col>
 														<b-col cols="1">:</b-col>
-														<b-col cols="6">--</b-col>
+														<b-col cols="6">{{data.civilstatus}}</b-col>
 													</b-row>
 													<b-row>
 														<b-col cols="5">Telephone No.</b-col>
 														<b-col cols="1">:</b-col>
-														<b-col cols="6">--</b-col>
+														<b-col cols="6">{{data.telephone}}</b-col>
 													</b-row>
 													<b-row style="background-color:#c1c1c1;">
 														<b-col cols="5">Mobile No.</b-col>
 														<b-col cols="1">:</b-col>
-														<b-col cols="6">--</b-col>
+														<b-col cols="6">{{data.mobileno}}</b-col>
 													</b-row>
 													<b-row>
 														<b-col cols="5">Email Address</b-col>
 														<b-col cols="1">:</b-col>
-														<b-col cols="6">--</b-col>
+														<b-col cols="6">{{data.email}}</b-col>
 													</b-row>
 												</b-container>
 												<hr>
@@ -260,57 +132,57 @@
 													<!-- Basic Information Unupdatable -->
 													<div class="form-group col-md-2">
 														<label class="control-label text-danger">Height (m)</label>
-														<h4>--</h4>
+														<h4>{{data.height}}</h4>
 													</div>
 													<div class="form-group col-md-2">
 														<label class="control-label text-danger">Weight (kg)</label>
-														<h4>--</h4>
+														<h4>{{data.weight}}</h4>
 													</div>
 													<div class="form-group col-md-2">
 														<label class="control-label text-danger">Blood Type</label>
-														<h4>--</h4>
+														<h4>{{data.bloodtype}}</h4>
 													</div>
 													<div class="form-group col-md-3">
 														<label class="control-label text-danger">Citizenship</label>
-														<h4>Filipino</h4>
+														<h4>{{data.citizenship}}</h4>
 													</div>
 													<div class="form-group col-md-3">
 														<label class="control-label text-danger">Country</label>
-														<h4>Philippines</h4>
+														<h4>{{data.country}}</h4>
 													</div>
 												</div>
 												<div class="row">
 													<!-- Basic Information Unupdatable -->
 													<div class="form-group col-md-2">
 														<label class="control-label text-danger">GSIS ID NO.</label>
-														<h4>--</h4>
+														<h4>{{data.gsis}}</h4>
 													</div>
 													<div class="form-group col-md-2">
 														<label class="control-label text-danger">PAG-IBIG ID NO.</label>
-														<h4>--</h4>
+														<h4>{{data.pagibig}}</h4>
 													</div>
 													<div class="form-group col-md-2">
 														<label class="control-label text-danger">PHILHEALTH NO.</label>
-														<h4>--</h4>
+														<h4>{{data.philhealth}}</h4>
 													</div>
 													<div class="form-group col-md-3">
 														<label class="control-label text-danger">SSS NO.</label>
-														<h4>--</h4>
+														<h4>{{data.sss}}</h4>
 													</div>
 													<div class="form-group col-md-3">
 														<label class="control-label text-danger">TIN NO.</label>
-														<h4>--</h4>
+														<h4>{{data.tin}}</h4>
 													</div>
 												</div>
 												<!-- Address -->
 												<div class="row">
 													<div class="form-group col-lg-9">
 														<label class="control-label text-danger">Residential Address</label>
-														<h4>N/A</h4>
+														<h4>{{full_address.prklotblk + ' '+ full_address.street + ' ' + full_address.strsub + ' Brgy. ' + full_address.barangay + ' ' + full_address.municipality +' '+ full_address.province }}</h4>
 													</div>
 													<div class="form-group col-md-3">
 														<label class="control-label text-danger">ZIP CODE</label>
-														<h4>--</h4>
+														<h4>{{data.zipcode}}</h4>
 													</div>
 												</div>
 												<div class="row">
@@ -881,27 +753,51 @@ export default {
 			municipalityList:[],
 			barangayList:[],
 			data:{
-				appointment:'',
+				 bio_num: '',
+                firstname:'',
+                middlename:'',
+                lastname:'',
+                presuf:'',
+                gender:'',
+				status: '',
 				office:'',
-				status:'',
+                civilstatus:'',
+                placeofbirth: '',
+                birthday:'',
 				telephone:'',
-				mobile:'',
+				mobileno:'',
 				email:'',
 				height:'',
 				weight:'',
-				blood:'',
+				bloodtype:'',
 				gsis:'',
 				pagibig:'',
 				philhealth:'',
 				sss:'',
-				tin:''
+                tin:'',
+                agency_no:'',
+                provsta : '',
+				muncit : '',
+				barangay : '',
+				prklotblk:'',
+				street:'',
+				strsub:'',
+				zipcode:''
 			},
 			address: {
-				province : '',
-				cities : '',
+				bio_num : '',
+				provsta : '',
+				muncit : '',
 				barangay : '',
-				prk:'',
-				zip:''
+			},
+			full_address: {
+				barangay : '',
+				municipality : '',
+				prklotblk:'',
+				province:'',
+				street:'',
+				strsub:'',
+				zipcode:''
 			}
 		}
 	},
@@ -916,8 +812,42 @@ export default {
 			var _this = this;
 			var _id = this.$route.params.id
 			axios.get('/api/view-employee/' + _id).then(function(response){
-				console.log(response.data[0]);
+				_this.data = response.data[0];
 				_this.employeedata = response.data[0];
+				_this.address.bio_num = response.data[0].bio_num;
+				_this.address.barangay = response.data[0].barangay;
+				_this.address.provsta = response.data[0].provsta;
+				_this.address.muncit = response.data[0].muncit;
+				if (_this.address.barangay != '' && _this.address.provsta != '' && _this.address.muncit ) {
+					_this.getfull_address();
+				}
+				console.log(_this.employeedata);
+				
+			});
+		},
+		getfull_address(){
+			var _this = this;
+			var _id = this.$route.params.id;
+			axios.get('/api/get-fulladdress/' +_this.data.bio_num).then(function(response) {
+				if (response.data[0].prklotblk === null) {
+					_this.full_address.prklotblk == ' ';
+				}else{
+					_this.full_address.prklotblk = response.data[0].prklotblk;
+				}
+				if (response.data[0].street === null) {
+					_this.full_address.street == ' ';
+				}else{
+					_this.full_address.street = response.data[0].street;
+				}
+				if (response.data[0].strsub === null) {
+					_this.full_address.strsub == ' ';
+				}else{
+					_this.full_address.strsub = response.data[0].strsub;
+				}
+				_this.full_address.barangay = response.data[0].barangay;
+				_this.full_address.municipality = response.data[0].municipality;
+				_this.full_address.province = response.data[0].province;
+				_this.full_address.zipcode = response.data[0].zipcode;
 			});
 		},
 		getAppointment(){

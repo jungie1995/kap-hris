@@ -5,6 +5,14 @@
 	<property name="net.sf.jasperreports.print.create.bookmarks" value="true"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<parameter name="bio_num" class="java.lang.String"/>
+	<parameter name="page_1" class="java.lang.String"/>
+	<parameter name="page_2" class="java.lang.String"/>
+	<parameter name="page_3" class="java.lang.String"/>
+	<parameter name="page_4" class="java.lang.String"/>
+	<parameter name="img_page_1" class="java.lang.String"/>
+	<parameter name="img_page_2" class="java.lang.String"/>
+	<parameter name="img_page_3" class="java.lang.String"/>
+	<parameter name="img_page_4" class="java.lang.String"/>
 	<queryString language="SQL">
 		<![CDATA[SELECT *
 FROM
@@ -382,7 +390,7 @@ WHERE emp.bio_num = $P{bio_num}]]>
 				<subreportParameter name="bio_num">
 					<subreportParameterExpression><![CDATA[$P{bio_num}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/kap-hris/public/PDS_inputs/PDS_page_1.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{page_1}]]></subreportExpression>
 			</p:subreportPart>
 		</part>
 		<part uuid="12e51415-14dc-4da7-8b3a-088648399386">
@@ -393,7 +401,7 @@ WHERE emp.bio_num = $P{bio_num}]]>
 				<subreportParameter name="bio_num">
 					<subreportParameterExpression><![CDATA[$P{bio_num}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/kap-hris/public/PDS_inputs/PDS_page_2.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{page_2}]]></subreportExpression>
 			</p:subreportPart>
 		</part>
 		<part uuid="9da3671e-9b1f-40d9-809c-7b951d83a174">
@@ -404,7 +412,7 @@ WHERE emp.bio_num = $P{bio_num}]]>
 				<subreportParameter name="bio_num">
 					<subreportParameterExpression><![CDATA[$P{bio_num}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/kap-hris/public/PDS_inputs/PDS_page_3.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{page_3}]]></subreportExpression>
 			</p:subreportPart>
 		</part>
 		<part uuid="238e5182-32c5-4e11-9775-d1cee85cbefa">
@@ -415,7 +423,7 @@ WHERE emp.bio_num = $P{bio_num}]]>
 				<subreportParameter name="bio_num">
 					<subreportParameterExpression><![CDATA[$P{bio_num}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportExpression><![CDATA["D:/IT FILES/LARAVEL PROJECTS/kap-hris/public/PDS_inputs/PDS_page_4.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{page_4}]]></subreportExpression>
 			</p:subreportPart>
 		</part>
 	</detail>

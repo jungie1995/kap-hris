@@ -28,7 +28,6 @@ Route::get('/generate-idnumber','EmployeeController@idGenerator');
 Route::get('/employee-list','EmployeeController@employeeList');
 Route::get('/employee-data-list','EmployeeController@employeedataList');
 
-Route::get('/view-employee/{bio_num}','EmployeeController@viewEmployee');
 
 Route::get('/get-province-list','AddressController@getProvince');
 
@@ -37,6 +36,9 @@ Route::get('/get-municipality-list/{id}','AddressController@getMunicipality');
 Route::get('/get-barangay-list/{id}','AddressController@getBarangay');
 	
 Route::post('/add-employee','EmployeeController@addEmployee');
+Route::get('/view-employee/{bio_num}','EmployeeController@viewEmployee');
+Route::put('/update-employee-data', 'EmployeeController@updateEmployee');
+Route::get('/get-fulladdress/{bio_num}', 'EmployeeController@EmployeeAddress');
 
 Route::get('/view-pds/{bio_num}','EmployeeController@printPDS');
 

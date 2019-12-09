@@ -182,6 +182,7 @@
 		</group>
 	</subDataset>
 	<parameter name="bio_num" class="java.lang.String"/>
+	<parameter name="img_page_3" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT *
 FROM
